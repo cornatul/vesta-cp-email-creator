@@ -1,13 +1,16 @@
 <?php
 
+namespace LzoMedia\VestCPEmail;
+
 
 class VestaEmailCreator {
 
 	/**
-	 * @param $vst_hostname
-	 * @param $vst_username
-	 * @param $vst_password
-	 * @param $domain
+     * @method createAccount
+	 * @param string $vst_hostname
+	 * @param string $vst_username
+	 * @param string $vst_password
+	 * @param string $domain
 	 */
 	public function createAccount($vst_hostname, $vst_username,$vst_password,$domain){
 
@@ -32,25 +35,11 @@ class VestaEmailCreator {
 		$answer = curl_exec($curl);
 
 		if ($answer == 0) {
-			echo "User account has been successfuly created\n";
+			echo "User account has been successfully created\n";
 		} else {
 			echo "Query returned error code: " . $answer . "\n";
 		}
 
 	}
 
-
-
 }
-
-
-$vst_hostname = 'server.vestacp.com';
-$vst_username = 'vestaUsername';
-$vst_password = 'vestaPassword';
-
-
-$domainToUse = 'domainToUseWhenCreatingTheDomain.com';
-
-$vestaCreator = new VestaEmailCreator();
-$vestaCreator->createAccount($vst_hostname, $vst_username,$vst_password,$domainToUse);
-

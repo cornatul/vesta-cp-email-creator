@@ -1,20 +1,40 @@
-#Vesta Mail Creator
+# Vesta Mail Creator
 
-This is a simple script to use for creating a email address in VestaCP Panel.
+This is a simple script to use for creating an email address in VestaCP Panel.
 For details please have a look to the php script.
 This is quite easy to use.
 
-##How to use Vesta CP Email Creator
+## How to use Vesta CP Email Creator
 ```
 git clone https://github.com/lzomedia/vesta-cp-email-creator.git .
 ```
-##Issues
-If you find issues please contact me via Github.
 
-##Owner
-This script is created by [@Lzo Media](https://lzomedia.com)
+or 
 
-##DON'T BE A DICK PUBLIC LICENSE
+```
+composer require lzomedia/vestacp-email
+```
+
+after 
+
+```
+$vst_hostname = 'server.vestacp.com';
+$vst_username = 'vestaUsername';
+$vst_password = 'vestaPassword';
+$domainToUse = 'domainToUseWhenCreatingTheDomain.com';
+
+$vestaCreator = new LzoMedia\VEstaCPEmail\VestaEmailCreator();
+$vestaCreator->createAccount($vst_hostname, $vst_username,$vst_password,$domainToUse);
+
+```
+
+## Issues
+If you find issues please contact me via Github or Email
+
+## Owner
+This script was created by [@Lzo Media](https://lzomedia.com)
+
+## DON'T BE A DICK PUBLIC LICENSE
 
 > Copyright (C) [2020] [Lzo Media]
 

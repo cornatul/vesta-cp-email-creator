@@ -1,0 +1,24 @@
+{
+  "name": "lzo-media/vestacp-email",
+  "version": "1.0",
+  "authors": [
+    {
+      "name": "Stefan Izdrail",
+      "email": "stefan@lzomedia.com",
+      "homepage": "https://lzomedia.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "stefan@lzomedia.com",
+    "wiki": "https://lzomedia.com/packages"
+  },
+  "autoload": {
+    "psr-4": {
+      "LzoMedia\\VestCPEmail\\": "src/"
+    }
+  },
+  "require": {
+    "ext-curl": "*"
+  }
+}
